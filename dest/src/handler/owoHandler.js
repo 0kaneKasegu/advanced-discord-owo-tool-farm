@@ -56,7 +56,7 @@ export const owoHandler = async (agent) => {
                 else
                     throw new Error("No Image/Link Detected in Captcha Message");
                 agent.totalCaptcha.resolved++;
-                selfbotNotify(message, agent.config, agent.totlCaptcha, agent.readyTimestamp, agent.captchaError, true);
+                selfbotNotify(message, agent.config, agent.totlCaptcha, agent.readyTimestamp, agent.captchaError = "", true);
             }
             catch (error) {
                 agent.captchaError = error.message
